@@ -19,8 +19,12 @@
   </head>
   <body class="bg-(--background-color) pt-20">
     <!-- Nav bar -->
-    <nav class="fixed top-0 left-0 z-50 w-full bg-(--background-color) shadow-sm">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+    <nav
+      class="fixed top-0 left-0 z-50 w-full bg-(--background-color) shadow-sm"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4"
+      >
         <!-- Logo -->
         <div class="font-bold text-lg">
           <a href="#about-section">Kuljira</a>
@@ -44,43 +48,123 @@
         </button>
       </div>
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden border-t border-(--green) px-5 py-4 sm:hidden">
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-(--green) px-5 py-4 sm:hidden"
+      >
         <ul class="flex list-none flex-col gap-4">
-          <li><a href="#about-section" class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)">About me</a></li>
-          <li><a href="#skills-section" class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)">Skills</a></li>
-          <li><a href="#projects-section" class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)">Projects</a></li>
-          <li><a href="#contact-section" class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)">Contact</a></li>
+          <li>
+            <a
+              href="#about-section"
+              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills-section"
+              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects-section"
+              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact-section"
+              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
 
     <!-- About me section -->
-    <section id="about-section">
-      <!-- Header -->
-      <div class="flex flex-col space-y-2 text-center">
-        <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl">Hi, I'm Kuljira Namjai</h1>
-        <p>Computer Engineering & Cybersecurity Student</p>
-      </div>
+    <section
+  id="about-section"
+  class="scroll-mt-20 min-h-screen px-5 py-24 md:px-10 lg:px-16"
+>
+  <div class="mx-auto max-w-6xl">
 
-      <!-- Details -->
-      <div class="flex flex-col lg:flex-row ">
-        <!-- About Left side -->
-       <div class="space-y-4">
-          <img src="" alt="profile_pic">
+    <!-- Section title -->
+    <div class="mb-16">
+      <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)">
+        About me
+      </p>
 
-          <div class="flex flex-col gap-1.5">
-            <i id="menu-icon" class="fa-solid fa-map-marker text-lg"></i>
-            <p>Bangkok, Thailand</p>
-          </div>
-       </div>
-       <!-- About right side -->
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptas rem consequuntur nulla odit perspiciatis consequatur molestiae ipsa laboriosam error.</p>
+      <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
+        Hi, I'm Kuljira Namjai.
+      </h1>
+    </div>
+
+    <!-- Main content -->
+    <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+
+      <!-- Left -->
+      <div>
+        <div
+          class="group relative overflow-hidden"
+        >
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5603AQHVfLhuuCPyTQ/profile-displayphoto-crop_800_800/B56aCtMPZ3HEAQ-/0/1789612064404?e=1791417600&v=beta&t=rbeMhE-pcquchhFNAxGF5MqURCdLDP0M5sZWZihjPUQ"
+            alt="Kuljira Namjai profile picture"
+            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div class="mt-5 flex items-center gap-2 text-sm opacity-70">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Bangkok, Thailand</span>
         </div>
       </div>
-      
 
-    </section>
+      <!-- Right -->
+      <div class="flex flex-col justify-center ">
+
+        <p class="max-w-2xl text-lg leading-8 md:text-xl">
+          I'm a Computer Engineering and Cybersecurity student interested in
+          cybersecurity and hands-on security research.
+        </p>
+
+        <p class="mt-6 max-w-2xl leading-7 opacity-70">
+          I enjoy exploring mobile application security, and Active Directory on Windows. Most of my learning
+          comes from building things, experimenting, breaking things, and
+          figuring out why they behave the way they do.
+        </p>
+
+        <p class="mt-6 max-w-2xl leading-7 opacity-70">
+          I'm also preparing for the ISC2 Certified in Cybersecurity (CC) certification to strengthen my understanding of fundamental cybersecurity concepts
+        </p>
+
+        <!-- Interests -->
+        <div class="mt-10">
+          <p class="mb-3 text-sm font-medium opacity-50">
+           I'm interested in
+          </p>
+
+          <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+            <span class="flex items-center gap-2 hover:bg-(--green) px-2 py-2 rounded-full transition-all ease-in-out">
+              <i class="fa-solid fa-mobile-screen text-(--dark-green)"></i>
+              Mobile Security
+            </span>
+
+            <span class="flex items-center gap-2 px-2 py-2 hover:bg-(--green) rounded-full  transition-all ease-in-out"">
+              <i class="fa-brands fa-windows text-(--dark-green)"></i>
+              Active Directory on Windows
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Skills section -->
     <section id="skills-section"></section>
@@ -89,15 +173,70 @@
     <section id="projects-section"></section>
 
     <!-- Contact section -->
-    <section id="contact-section">
-      <h1 class="text-center font-bold ">Contact</h1>
+    <section id="contact-section" class="min-h-screen px-5 py-20">
+      <div class="mx-auto max-w-5xl">
+        <!-- Section title -->
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold md:text-4xl">Contact Me</h2>
+
+          <p class="mt-3 text-(--text-color-secondary)">
+            Feel free to reach out or connect with me.
+          </p>
+        </div>
+
+        <!-- Contact cards -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/bluemzzn"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col items-center rounded-xl border border-(--dark-green) shadow-lg p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-(--background-color-hover)"
+          >
+            <i
+              class="fa-brands fa-github text-4xl transition-transform duration-300 group-hover:scale-110 text-(--dark-green)"
+            ></i>
+            <h3 class="mt-4 text-xl font-semibold">GitHub</h3>
+            <p class="mt-2 text-sm opacity-70">Check out my projects</p>
+            <span class="mt-4 text-sm"> @bluemzzn </span>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:kuljira.naam@gmail.com"
+            class="group flex flex-col items-center rounded-xl border border-(--dark-green) shadow-lg p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-(--background-color-hover)"
+          >
+            <i
+              class="fa-solid fa-envelope text-4xl transition-transform duration-300 group-hover:scale-110 text-(--dark-green)"
+            ></i>
+            <h3 class="mt-4 text-xl font-semibold">Email</h3>
+            <p class="mt-2 text-sm opacity-70">Send me an email</p>
+            <span class="mt-4 break-all text-sm"> kuljira.naam@gmail.com </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/kuljira-namjai-078030414/
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col items-center rounded-xl border border-(--dark-green) shadow-lg p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-(--background-color-hover)"
+          >
+            <i
+              class="fa-brands fa-linkedin text-4xl transition-transform duration-300 group-hover:scale-110 text-(--dark-green)"
+            ></i>
+            <h3 class="mt-4 text-xl font-semibold">LinkedIn</h3>
+            <p class="mt-2 text-sm opacity-70">Connect with me</p>
+            <span class="mt-4 text-sm">My LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="">
+      <div class="shadow-[0_-1px_5px_-1px_rgba(0,0,0,0.1)]">
         <div class="text-center">
-          <span class="">© 2026 By Kuljira Namjai | All rights Reserved.</span>
+          <span class="text-gray-600">© 2026 By Kuljira Namjai | All rights Reserved.</span>
         </div>
       </div>
     </footer>
