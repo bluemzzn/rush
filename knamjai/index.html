@@ -13,10 +13,10 @@
       referrerpolicy="no-referrer"
     />
     <!-- tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../tailwind.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  
   <body class="bg-(--background-color) pt-20">
     <!-- Nav bar -->
     <nav
@@ -29,13 +29,15 @@
         <div class="font-bold text-lg">
           <a href="#about-section">Kuljira</a>
         </div>
+
         <!-- Desktop menu -->
         <ul class="hidden list-none gap-6 sm:flex">
-          <li><a href="#about-section">About me</a></li>
-          <li><a href="#skills-section">Skills</a></li>
-          <li><a href="#projects-section">Projects</a></li>
-          <li><a href="#contact-section">Contact</a></li>
+          <li><a href="#about-section" class="hover:text-(--green) hover:underline transition-all ease-in-out">About me</a></li>
+          <li><a href="#skills-section" class="hover:text-red hover:underline transition-all ease-in-out">Skills</a></li>
+          <li><a href="#projects-section" class="hover:text-(--dark-green) hover:underline transition-all ease-in-out">Projects</a></li>
+          <li><a href="#contact-section" class="hover:text-(--dark-green) hover:underline transition-all ease-in-out">Contact</a></li>
         </ul>
+        
         <!-- Hamburger -->
         <button
           id="menu-btn"
@@ -47,117 +49,99 @@
           <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
+
       <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden border-t border-(--green) px-5 py-4 sm:hidden"
-      >
+      <div id="mobile-menu" class="hidden border-t border-(--green) px-5 py-4 sm:hidden">
         <ul class="flex list-none flex-col gap-4">
           <li>
-            <a
-              href="#about-section"
-              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
-              >About me</a
-            >
+            <a href="#about-section" class="mobile-link block rounded-md px-3 py-2 hover:bg-(--background-color-hover)" >About me</a>
           </li>
           <li>
-            <a
-              href="#skills-section"
-              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
-              >Skills</a
-            >
+            <a href="#skills-section" class="mobile-link block rounded-md px-3 py-2 hover:bg-(--background-color-hover)" >Skills</a>
           </li>
           <li>
-            <a
-              href="#projects-section"
-              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
-              >Projects</a
-            >
+            <a href="#projects-section" class="mobile-link block rounded-md px-3 py-2 hover:bg-(--background-color-hover)" >Projects</a>
           </li>
           <li>
-            <a
-              href="#contact-section"
-              class="block rounded-md px-3 py-2 hover:bg-(--background-color-hover)"
-              >Contact</a
-            >
+            <a href="#contact-section" class="mobile-link block rounded-md px-3 py-2 hover:bg-(--background-color-hover)" >Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- About me section -->
-    <section id="about-section" class="scroll-mt-20 min-h-screen px-5 py-24 md:px-10 lg:px-16">
-    <div class="mx-auto max-w-6xl">
+    <section id="about-section" class="scroll-mt-20 px-5 py-24 md:px-10 lg:px-16">
+      <div class="mx-auto max-w-6xl">
 
-      <!-- Section title -->
-      <div class="mb-16">
-        <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)">
-          About me
-        </p>
+        <!-- Section title -->
+        <div class="mb-16">
+          <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)">
+            About me
+          </p>
 
-        <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
-          Hi, I'm Kuljira Namjai.
-        </h1>
-      </div>
-
-      <!-- Main content -->
-      <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-
-        <!-- Left -->
-        <div>
-          <div
-            class="group relative overflow-hidden"
-          >
-            <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQHVfLhuuCPyTQ/profile-displayphoto-crop_800_800/B56aCtMPZ3HEAQ-/0/1789612064404?e=1791417600&v=beta&t=rbeMhE-pcquchhFNAxGF5MqURCdLDP0M5sZWZihjPUQ"
-              alt="Kuljira Namjai profile picture"
-              class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-
-          <div class="mt-5 flex items-center gap-2 text-sm opacity-70">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Bangkok, Thailand</span>
-          </div>
+          <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
+            Hi, I'm Kuljira Namjai.
+          </h1>
         </div>
 
-        <!-- Right -->
-        <div class="flex flex-col justify-center ">
+        <!-- Main content -->
+        <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
 
-          <p class="max-w-2xl text-lg leading-8 md:text-xl">
-            I'm a Computer Engineering and Cybersecurity student interested in
-            cybersecurity and hands-on security research.
-          </p>
+          <!-- Left -->
+          <div class="flex flex-col gap-5">
+            <div
+              class="group relative overflow-hidden"
+            >
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5603AQHVfLhuuCPyTQ/profile-displayphoto-crop_800_800/B56aCtMPZ3HEAQ-/0/1789612064404?e=1791417600&v=beta&t=rbeMhE-pcquchhFNAxGF5MqURCdLDP0M5sZWZihjPUQ"
+                alt="Kuljira Namjai profile picture"
+                class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-          <p class="mt-6 max-w-2xl leading-7 opacity-70">
-            I enjoy exploring mobile application security, and Active Directory on Windows. Most of my learning
-            comes from building things, experimenting, breaking things, and
-            figuring out why they behave the way they do.
-          </p>
-
-          <p class="mt-6 max-w-2xl leading-7 opacity-70">
-            I'm also preparing for the ISC2 Certified in Cybersecurity (CC) certification to strengthen my understanding of fundamental cybersecurity concepts
-          </p>
-
-          <!-- Interests -->
-          <div class="mt-10">
-            <p class="mb-3 text-sm font-medium opacity-50">
-            I'm interested in
-            </p>
-
-            <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
-              <span class="flex items-center gap-2 hover:bg-(--green) px-2 py-2 rounded-full transition-all ease-in-out">
-                <i class="fa-solid fa-mobile-screen text-(--dark-green)"></i>
-                Mobile Security
-              </span>
-
-              <span class="flex items-center gap-2 px-2 py-2 hover:bg-(--green) rounded-full  transition-all ease-in-out"">
-                <i class="fa-brands fa-windows text-(--dark-green)"></i>
-                Active Directory on Windows
-              </span>
+            <div class="flex items-center gap-2 text-sm opacity-70">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Bangkok, Thailand</span>
             </div>
           </div>
 
+          <!-- Right -->
+          <div class="flex flex-col justify-center">
+            <div class="flex flex-col gap-6">
+              <p class="max-w-2xl text-lg leading-8 md:text-xl">
+                I'm a Computer Engineering and Cybersecurity student interested in
+                cybersecurity and hands-on security research.
+              </p>
+  
+              <p class="max-w-2xl leading-7 opacity-70">
+                I enjoy exploring mobile application security, and Active Directory on Windows. Most of my learning
+                comes from building things, experimenting, breaking things, and
+                figuring out why they behave the way they do.
+              </p>
+  
+              <p class="max-w-2xl leading-7 opacity-70">
+                I'm also preparing for the ISC2 Certified in Cybersecurity (CC) certification to strengthen my understanding of fundamental cybersecurity concepts
+              </p>
+            </div>
+
+            <!-- Interests -->
+            <div class="mt-10">
+              <p class="mb-3 text-sm font-medium opacity-50">
+              I'm interested in
+              </p>
+
+              <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                <span class="flex items-center gap-2 hover:bg-(--green) hover:text-white px-2 py-2 rounded-full transition-all ease-in-out">
+                  <i class="fa-solid fa-mobile-screen text-(--dark-green)"></i>
+                  Mobile Security
+                </span>
+
+                <span class="flex items-center gap-2 px-2 py-2 hover:bg-(--green) hover:text-white rounded-full  transition-all ease-in-out">
+                  <i class="fa-brands fa-windows text-(--dark-green)"></i>
+                  Active Directory on Windows
+                </span> 
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -165,85 +149,81 @@
 
       <!-- Skills section -->
 
-  <section id="skills-section" class="scroll-mt-20 px-5 py-24 md:px-10 lg:px-16" > <div class="mx-auto max-w-6xl">
+  <section id="skills-section" class="scroll-mt-20 px-5 py-30 md:px-10 lg:px-16" > <div class="mx-auto max-w-6xl">
 
-  <!-- Header -->
-  <div class="mb-14">
-    <p
-      class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)"
-    >
-      Skills
-    </p>
+    <!-- Header -->
+    <div class="mb-14">
+      <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)">
+        Skills
+      </p>
 
-    <h2 class="text-4xl font-bold md:text-5xl">
-      Things I work with.
-    </h2>
-  </div>
-
-  <!-- Skills -->
-  <div class="grid gap-10 md:grid-cols-3 lg:grid-cols-3">
-
-    <!-- Security -->
-    <div class="border-t-2 border-(--dark-green) pt-5">
-      <div class="mb-5 flex items-center gap-3">
-        <i class="fa-solid fa-shield-halved text-(--dark-green)"></i>
-        <h3 class="font-semibold text-lg">Cybersecurity</h3>
-      </div>
-
-      <ul class="space-y-3 text-sm opacity-75">
-        <li>Network Security</li>
-        <li>Web Exploitation</li>
-        <li>Kerberos</li>
-        <li>CTF Challenges</li>
-      </ul>
+      <h2 class="text-4xl font-bold md:text-5xl">
+        Things I work with.
+      </h2>
     </div>
 
-    <!-- Networking -->
-    <div class="border-t-2 border-(--dark-green) pt-5">
-      <div class="mb-5 flex items-center gap-3">
-        <i class="fa-solid fa-network-wired text-(--dark-green)"></i>
-        <h3 class="font-semibold text-lg">Networking</h3>
+    <!-- Skills -->
+    <div class="grid gap-10 md:grid-cols-3 lg:grid-cols-3">
+
+      <!-- Security -->
+      <div class="border-t-2 border-(--dark-green) pt-5">
+        <div class="mb-5 flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-(--dark-green)"></i>
+          <h3 class="font-semibold text-lg">Cybersecurity</h3>
+        </div>
+
+        <ul class="space-y-3 text-sm opacity-75">
+          <li>Network Security</li>
+          <li>Web Exploitation</li>
+          <li>Kerberos</li>
+          <li>CTF Challenges</li>
+        </ul>
       </div>
 
-      <ul class="space-y-3 text-sm opacity-75">
-        <li>Nmap</li>
-        <li>Network Enumeration</li>
-        <li>TCP/IP Fundamentals</li>
-      </ul>
-    </div>
+      <!-- Networking -->
+      <div class="border-t-2 border-(--dark-green) pt-5">
+        <div class="mb-5 flex items-center gap-3">
+          <i class="fa-solid fa-network-wired text-(--dark-green)"></i>
+          <h3 class="font-semibold text-lg">Networking</h3>
+        </div>
 
-    <!-- Currently Learning -->
-    <div class="border-t-2 border-(--dark-green) pt-5">
-      <div class="mb-5 flex items-center gap-3">
-        <i class="fa-solid fa-book-open text-(--dark-green)"></i>
-        <h3 class="font-semibold text-lg">Currently Learning</h3>
+        <ul class="space-y-3 text-sm opacity-75">
+          <li>Nmap</li>
+          <li>Network Enumeration</li>
+          <li>TCP/IP Fundamentals</li>
+        </ul>
       </div>
 
-      <ul class="space-y-3 text-sm opacity-75">
-        <li>Hack The Box</li>
-        <li>CTF Challenges</li>
-        <li>Mobile Security</li>
-        <li>Web Exploitation</li>
-      </ul>
-    </div>
+      <!-- Currently Learning -->
+      <div class="border-t-2 border-(--dark-green) pt-5">
+        <div class="mb-5 flex items-center gap-3">
+          <i class="fa-solid fa-book-open text-(--dark-green)"></i>
+          <h3 class="font-semibold text-lg">Currently Learning</h3>
+        </div>
 
+        <ul class="space-y-3 text-sm opacity-75">
+          <li>Hack The Box</li>
+          <li>CTF Challenges</li>
+          <li>Mobile Security</li>
+          <li>Web Exploitation</li>
+        </ul>
       </div>
-    </div>
-  </section>
+
+        </div>
+      </div>
+    </section>
+
       <!-- Projects section -->
-
     <section id="projects-section" class="scroll-mt-20 px-5 py-2 md:px-10 lg:px-16 " > <div class="mx-auto max-w-6xl">
 
     <!-- Header -->
     <div class="mb-14">
-      <p
-        class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)"
-      >
+      <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--dark-green)">
         Projects
       </p>
 
       <h2 class="text-4xl font-bold md:text-5xl">
-        Things I've built.
+        What I've done.
       </h2>
 
       <p class="mt-4 max-w-2xl leading-7 opacity-70">
